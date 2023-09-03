@@ -1,6 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+
 
 namespace ShapeTracker.Models 
 {
@@ -8,7 +7,6 @@ namespace ShapeTracker.Models
   {
     public int Side1 { get; set; }
     public int Side2 { get; set; }
-
     public int Side3 { get; set; }
     private static List<Triangle> _instances = new List<Triangle> {};
     
@@ -23,6 +21,8 @@ namespace ShapeTracker.Models
 
     public string CheckType() 
     {
+
+      
       if ((Side1 > (Side2 + Side3)) || (Side2 > (Side1 + Side3)) || (Side3 > (Side1 + Side2)))
       {
         return "not a triangle";
